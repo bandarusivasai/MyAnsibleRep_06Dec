@@ -1,0 +1,29 @@
+---
+- Employee data: 
+   - name: sai
+     Id: 101
+     Salary: 8000
+     Mail-Id: 1234@dfg.com
+     Phone No: 8794561230
+     Office: Deccan Park
+     Address: 
+         D.No: 2-87,
+         Street: Anganwadi
+         Locality: Ponnur
+         District: Guntur
+         Pincode: 255124
+
+
+         
+   - name: Siva
+     Id: 102
+     Salary: 10000
+     Mail-Id: 4534@dfg.com
+     Phone No: 8794561237
+     Office: Deccan Park
+     Address: 
+         D.No: 4-56,
+         Street: Anganwadi,
+         Locality: Ponnur,
+         District: Guntur,
+         Pincode: 255124
