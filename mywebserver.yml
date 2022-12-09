@@ -2,27 +2,27 @@
 - hosts: myWebservers
   become: yes
   tasks:
-  - name: install web server
+  - name: install web server on ubuntu
     apt:
-      name: apache2
+      name: "{{Webpackonubuntu}}"
       state: present
     when: ansible_os_family =="Debian"
 
 
   - name: webserver service start
     service:
-        name: apache2
+        name: "{{Webpackonubuntu}}"
         state: restarted
     when: ansible_os_family =="Debian"
      
-  - name: install httpd server on redhat
+  - name: install httpd server on Redhat
     yum:
-       name: httpd
+       name: "{{WebpackonRedhat}}"
        state: present
     when: ansible_os_family =="RedHat"
      
   - name: starting httpd webserver on Redhat
     service:
-         name: httpd
+         name: "{{WebpackonRedhat}}"
          state: started
     when: ansible_os_family =="RedHat"
