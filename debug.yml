@@ -9,4 +9,4 @@
   - name: to display first task result
     debug:
        msg: "{{myresult}}"
-       verbosity: 1
+       verbosity: 3
