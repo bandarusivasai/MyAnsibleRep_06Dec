@@ -1,0 +1,12 @@
+---
+- hosts: 172.31.42.193
+  become: yes
+  tasks:
+  - name: execute a linux command
+    command: hostname -f
+    register: myresult
+
+  - name: to display first task result
+    debug:
+       msg: "{{myresult}}"
+       verbosity: 1
