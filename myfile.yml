@@ -1,0 +1,6 @@
+---
+- name: Create a file
+  file:
+     path: /home/ubuntu/myfile.txt
+     state: touch
+     mode: 0777
