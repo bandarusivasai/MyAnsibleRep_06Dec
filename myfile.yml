@@ -1,4 +1,14 @@
 ---
+- name: install web server
+  yum:
+     name: httpd
+     state: present 
+
+- name: starting the web server
+  service:
+       name: httpd
+       state: restarted
+       
 - name: Create a file
   file:
      path: /home/ubuntu/myfile.txt

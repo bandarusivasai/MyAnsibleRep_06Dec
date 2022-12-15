@@ -6,9 +6,10 @@
   - name: Copy the file into ansible nodes
     copy: 
        src: staticfile
-       dest: /home/ubuntu/mystaticfile.txt
+       dest: /home/sai/mystaticfile.txt
 
-  - name: Replace the web server home page
-    template:
-      src: index.j2
-      dest: /var/www/html/index.html
+ # - name: Replace the web server home page
+    #template:
+     # src: index.j2
+     # dest: /var/www/html/index.html 
+      
