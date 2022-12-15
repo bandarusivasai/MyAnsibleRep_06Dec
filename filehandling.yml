@@ -11,4 +11,4 @@
   - name: Replace the web server home page
     template:
       src: index.j2
-      dest: var/www/html/index.html
+      dest: /var/www/html/index.html
