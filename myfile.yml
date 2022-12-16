@@ -1,7 +1,7 @@
 ---
 - name: install web server
-  yum:
-     name: httpd
+  apt:
+     name: apache2
      state: present 
 
 - name: starting the web server
