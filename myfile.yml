@@ -1,4 +1,14 @@
 ---
+- name: install web server
+  apt:
+       name: apache2
+       state: present
+
+- name: install web server
+  service:
+       name: apache2
+       state: restarted
+       
 - name: Create a file
   file:
      path: /home/sai/myfile.txt
