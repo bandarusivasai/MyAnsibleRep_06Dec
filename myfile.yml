@@ -3,14 +3,17 @@
   apt:
        name: apache2
        state: present
+  notify: Restart web server
 
-- name: install web server
-  service:
-       name: apache2
-       state: restarted
-       
 - name: Create a file
   file:
      path: /home/sai/myfile.txt
      state: touch
      mode: 0777
+
+
+  handlers:
+  - name: Restart web server
+  service:
+       name: apache2
+       state: restarted
