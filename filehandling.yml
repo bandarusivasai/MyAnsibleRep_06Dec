@@ -13,9 +13,17 @@
     template:
       src: index.j2
       dest: /var/www/html/index.html 
+    notify: Restart web server
+
        
   - name: Download an internet file
     get_url:
          url: https://pkg.jenkins.io/debian-stable/jenkins.io.key
          dest: /home/sai/jenkins.io.key
          force_basic_auth: yes
+
+  handlers:
+  - name: Restart web server
+    service:
+       name: wget
+       state: restarted

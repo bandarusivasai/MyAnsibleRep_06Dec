@@ -1,7 +1,7 @@
 ---
 - name: install web server
   apt:
-       name: wget
+       name: apache2
        state: present
   notify: Restart web server
 
@@ -12,8 +12,3 @@
      mode: 0777
 
 
-  handlers:
-     - name: Restart web server
-       service:
-          name: wget
-          state: restarted
