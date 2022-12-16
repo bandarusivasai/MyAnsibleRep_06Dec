@@ -1,0 +1,18 @@
+---
+- hosts: myubuntuservers
+  become: yes
+  tasks:
+  - name: install web server on unbuntu
+    apt:
+       name: apache2
+       state: present 
+    
+  - name: install tree on ubuntu 
+    apt:
+       name: tree
+       stateee: present
+
+  - name: install wget
+    apt:
+      name: wget
+      state: present
