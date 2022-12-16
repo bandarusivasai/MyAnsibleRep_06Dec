@@ -25,5 +25,5 @@
   handlers:
   - name: Restart web server
     service:
-       name: wget
+       name: apache2
        state: restarted
