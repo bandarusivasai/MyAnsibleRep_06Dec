@@ -1,0 +1,20 @@
+---
+- name: Tomcat admin User 
+  template:
+       src: templates/tomcatuser.j2
+       dest: /opt/tomcat/conf/tomcat-users.xml
+
+- name: To copy context file into ansible node
+  template:
+       src: templates/tomcontext.j2
+       dest: /opt/tomcat/webapps/manager/META-INF/context.xml
+
+- name: To copy host context file into ansible node
+  template: 
+       src: templates/tomhost.j2
+       dest: /opt/tomcat/webapps/host-manager/META-INF/context.xml
+
+- name: To copy tomcat service file into ansible node
+  template:
+       src: templates/tomservice.j2
+       dest: /etc/systemd/system/tomcat.service
